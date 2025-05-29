@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency Website</title>
+
+    <!-- Links  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header Section  -->
+    <header class="header section">
+        <nav class="nav container">
+            <p class="logo">Travel agency.</p>
+            <ul class="nav-bar">
+                <li class="nav-list"><a href="#" class="nav-links">Flights</a></li>
+                <li class="nav-list"><a href="#" class="nav-links">Hotel</a></li>
+                <li class="nav-list"><a href="#" class="nav-links">Trains</a></li>
+                <li class="nav-list"><a href="#" class="nav-links">Buses</a></li>
+                <li class="nav-list"><a href="#" class="nav-links">Cabs</a></li>
+            </ul>
+            <button class="nav-btn">Sign In</button>
+        </nav>
+    </header>
+
+    <!-- Top Flight Deals Section  -->
+
+    <!-- Popular Section  -->
+
+    <!-- Booking Section  -->
+
+    <!-- FAQs Section  -->
+
+    <!-- Top Visited Places Section  -->
+
+    <!-- Newsletter Section  -->
+
+    <!-- Footer Section  -->
+
+    <!-- Script  -->
+    <script>
+        const links = document.querySelectorAll('.nav-links');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent page jump if using #
+                links.forEach(l => l.classList.remove('active')); // Remove all active
+                this.classList.add('active'); // Add active to clicked link
+            });
+        });
+    </script>
+</body>
+
+</html>
