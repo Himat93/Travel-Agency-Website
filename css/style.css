@@ -318,6 +318,7 @@ ul, li {
     flex-direction: row-reverse;
     justify-content: space-between;
     position: relative;
+    transition: all 0.3s ease;
 }
 
 .deals-places-airlines-info {
@@ -347,6 +348,11 @@ ul, li {
     background-color: #8CB8D2;
     padding: 0.8rem 1.5rem;
     width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.deals-places-airlines-info button:hover {
+    transform: scale(1.05);
 }
 
 .deals-places-airlines-img img {
@@ -364,8 +370,13 @@ ul, li {
     border-radius: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
+.deals-places-airlines:hover, .deals-places-bookings:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
 .deals-places-bookings img:first-child {
     display: block;
@@ -420,9 +431,7 @@ ul, li {
     display: flex;
     align-items: center;
     gap: 30px;
-    overflow-x: auto;
     padding: 20px;
-    /* scroll-snap-type: x mandatory; */
     margin-top: 3rem;
 }
 
@@ -433,13 +442,17 @@ ul, li {
     min-width: 325px;
     max-width: 350px;
     flex: 0 0 auto;
-    /* scroll-snap-align: start; */
-    /* overflow: hidden; */
     position: relative;
+    transition: all 0.3s ease;
+}
+
+.popular-airlines-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .popular-airlines-card.first, .popular-airlines-card.last {
-    opacity: 0.5;
+    opacity: 0.3;
     overflow: hidden;
 }
 
@@ -473,9 +486,141 @@ ul, li {
     z-index: 1;
     width: 290px;
     border-radius: 1rem;
-    background: #f2f8fa;
-    background: linear-gradient(181deg, rgba(242, 248, 250, 1) 0%, rgba(245, 255, 249, 1) 50%, rgba(242, 242, 242, 1) 100%);
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.48);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+    border: 1px solid rgba(255, 255, 255, 0.61);
 }
 
 /* BOOKING SECTION  */
+.booking {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-header {
+    text-align: center;
+}
+
+.booking-title {
+    font-family: montserrat;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.booking-title-info {
+    font-size: 1rem;
+    color: #7F7F7F;
+}
+
+.booking-main {
+    width: 1000px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: ;
+    justify-content: center;
+    gap: 30px;
+}
+
+.booking-main-hotel_moxy {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: all 0.3s ease;
+}
+
+.booking-main-hotel_moxy:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.booking-main img {
+    width: 100%;
+}
+
+.booking-first {
+    width: 300px;
+}
+
+.booking-img_wrapper {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+
+
+#booking-middle-img {
+    width: 400px; 
+    height: 300px;
+}
+
+#booking-last-img {
+    width: 400px
+}
+
+.booking-main-img_overlay {
+    width: 260px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: -1.5rem;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0px 10px 37px -3px rgba(0, 0, 0, 0.24);
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.48);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+    border: 1px solid rgba(255, 255, 255, 0.61);
+}
+
+.booking-middle-img-overlay {
+    text-align: left;
+    bottom: -3.5rem;
+    width: 350px;
+    padding: 0.5rem 1rem;
+}
+
+.booking-middle-img-overlay .booking-overly_label {
+    font-size: 1.4rem;
+}
+
+.booking-middle-img-overlay .booking-overlay_starts {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.booking-middle-img-overlay .booking-overlay_distance {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #7F7F7F;
+    margin-bottom: 1rem;
+}
+
+.booking-middle-img-overlay .booking-overlay_btn {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    background-color: #16161b;
+    color: #ffffff;
+    position: absolute;
+    right: 1.5rem;
+    top: 70px;
+    transition: all 0.3s ease;
+}
+
+.booking-middle-img-overlay .booking-overlay_btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
